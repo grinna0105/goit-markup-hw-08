@@ -1,0 +1,109 @@
+.team {
+    padding: 60px 0;
+    background-color: var(--additional-background-color);
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.team_title {
+    @include font(28px, 700, 1.16, 0.03em);
+
+    margin-bottom: 30px;
+    color: var(--title-text-color);
+
+    @media screen and (min-width: 1200px) {
+        font-size: 36px;
+        margin-bottom: 50px;
+    }  
+}
+
+.team_list{
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+}
+
+.team_item {
+    background-color: var(--primary-white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 30px) / 2);
+    } 
+
+    @media screen and (min-width:1200px) {
+        width: calc((100% - 90px) / 4);
+    }
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+.member {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.member_name {
+    @include font(16px, 500, 1.19, 0.03em);
+
+    margin-bottom: 10px;
+    color: var(--title-text-color);
+}
+
+.member_text {
+    margin-bottom: 16px;
+
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+}
+
+.web {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.web_link {
+    @include center (flex, center, center);
+
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+
+    transition: background-color var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.web_icon {
+    fill: var(--social-links);
+
+    transition: fill var(--timing-function);
+
+    .web_link:hover &,
+    .web_link:focus & {
+        fill: var(--primary-white-color);
+    }
+
+}
