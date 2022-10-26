@@ -421,6 +421,9 @@ button {
   -webkit-transition: color var(--timing-function);
   transition: color var(--timing-function);
 }
+.contact_link:hover, .contact_link:focus {
+  color: var(--accent-color);
+}
 @media screen and (min-width: 1200px) {
   .contact_link {
     font-size: 14px;
@@ -461,7 +464,7 @@ button {
   transition: fill var(--timing-function);
 }
 .contact_icon:hover, .contact_icon:focus {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 .contact_link:hover .contact_icon,
@@ -1402,7 +1405,7 @@ a:focus .examples-description {
   height: 100vh;
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  z-index: 1000;
   overflow-y: scroll;
   -webkit-transition: opacity var(--timing-function), -webkit-transform var(--timing-function);
   transition: opacity var(--timing-function), -webkit-transform var(--timing-function);

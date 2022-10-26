@@ -273,6 +273,12 @@
         
         transition: color var(--timing-function);
 
+        &:hover,
+        &:focus {
+        color: var(--accent-color);
+        }
+
+
         @media screen and (min-width: 1200px) {
             
             font-size: 14px;
@@ -316,7 +322,7 @@
 
     &:hover,
     &:focus {
-        color: var(--accent-color);
+        fill: var(--accent-color);
     }
     
 }
